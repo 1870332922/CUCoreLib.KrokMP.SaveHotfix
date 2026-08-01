@@ -39,6 +39,10 @@
 
 本热修复也按兼容 CUCoreLib nightly 1.0.4 的方式设计，但实际测试基线为 CUCoreLib 1.0.3-alpha。
 
+感谢以下参与测试的玩家: 
+下雪吃火锅
+叶er
+
 ### 工作原理
 
 KrokMP 会分别保存和载入每一名多人角色。CUCoreLib 原有的扩展存档系统主要按单机作用域设计，保存和恢复时依赖当前本地角色作为目标。
@@ -216,6 +220,10 @@ Tested with:
 - BepInEx 5.4.23.5
 - KrokMP 4.0.1
 - CUCoreLib 1.0.3-alpha
+
+Special thanks to the following players for helping test this project: 
+下雪吃火锅
+叶er
 
 The hotfix was also designed to work with CUCoreLib nightly 1.0.4, but the tested baseline is CUCoreLib 1.0.3-alpha.
 
