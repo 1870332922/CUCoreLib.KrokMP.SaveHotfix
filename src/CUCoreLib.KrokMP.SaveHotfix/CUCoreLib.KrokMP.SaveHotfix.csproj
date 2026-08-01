@@ -1,0 +1,52 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net472</TargetFramework>
+    <OutputType>Library</OutputType>
+
+    <!-- Keep the tested CLR assembly identity. The release file is renamed by scripts/build.ps1. -->
+    <AssemblyName>CUCoreLib.KrokMP.SaveSystemBypassHotfix</AssemblyName>
+    <RootNamespace>CUCoreLibKrokMPSaveSystemBypassHotfix</RootNamespace>
+
+    <Version>1.0.0</Version>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+    <FileVersion>1.0.0.0</FileVersion>
+    <InformationalVersion>1.0.0</InformationalVersion>
+    <PackageLicenseExpression>LGPL-3.0-only</PackageLicenseExpression>
+
+    <LangVersion>latest</LangVersion>
+    <Nullable>disable</Nullable>
+    <ImplicitUsings>disable</ImplicitUsings>
+    <Deterministic>true</Deterministic>
+    <DebugType>portable</DebugType>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+
+    <GameDir Condition="'$(GameDir)' == '' and '$(CU_GAME_DIR)' != ''">$(CU_GAME_DIR)</GameDir>
+    <GameDir Condition="'$(GameDir)' == ''">steamapps\common\Casualties Unknown Demo</GameDir>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NETFramework.ReferenceAssemblies" Version="1.0.3" PrivateAssets="All" />
+
+    <Reference Include="BepInEx">
+      <HintPath>$(GameDir)\BepInEx\core\BepInEx.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="0Harmony">
+      <HintPath>$(GameDir)\BepInEx\core\0Harmony.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="UnityEngine.CoreModule">
+      <HintPath>$(GameDir)\CasualtiesUnknown_Data\Managed\UnityEngine.CoreModule.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+  </ItemGroup>
+
+  <Target Name="ValidateGameReferences" BeforeTargets="ResolveReferences">
+    <Error Condition="!Exists('$(GameDir)\BepInEx\core\BepInEx.dll')"
+           Text="找不到 BepInEx.dll。请通过 -p:GameDir=&quot;游戏目录&quot; 或环境变量 CU_GAME_DIR 指定 Casualties Unknown Demo 根目录。" />
+    <Error Condition="!Exists('$(GameDir)\BepInEx\core\0Harmony.dll')"
+           Text="找不到 0Harmony.dll。请确认 BepInEx 5 已正确安装。" />
+    <Error Condition="!Exists('$(GameDir)\CasualtiesUnknown_Data\Managed\UnityEngine.CoreModule.dll')"
+           Text="找不到 UnityEngine.CoreModule.dll。GameDir 必须指向游戏根目录。" />
+  </Target>
+</Project>
