@@ -26,7 +26,7 @@
 
 完全卸载 CUCoreLib 的存档补丁可以恢复 KrokMP 的玩家背包隔离，但也会导致通过 CUCoreLib 注册的自定义 Mod 物品无法载入。本项目采用选择性修复方式：只关闭存在玩家身份混淆风险的保存和恢复链路，同时保留 CUCoreLib 的自定义物品载入 Transpiler。
 
-**1.0.1** 已通过实际多人联机测试：各玩家背包能够正确独立恢复，基于 CUCoreLib 的自定义物品也可以正常保存和载入。
+**1.0.0** 已通过实际多人联机测试：各玩家背包能够正确独立恢复，基于 CUCoreLib 的自定义物品也可以正常保存和载入。
 
 ### 兼容环境
 
@@ -38,6 +38,10 @@
 - CUCoreLib 1.0.3-alpha
 
 本热修复也按兼容 CUCoreLib nightly 1.0.4 的方式设计，但实际测试基线为 CUCoreLib 1.0.3-alpha。
+
+感谢以下参与测试的玩家: 
+下雪吃火锅
+叶er
 
 ### 工作原理
 
@@ -82,7 +86,7 @@ KrokMP 会分别保存和载入每一名多人角色。CUCoreLib 原有的扩展
 5. 将发布 DLL 放入该目录：
 
    ```text
-   BepInEx\plugins\CUCoreLib.KrokMP.SaveHotfix\CUCoreLib.KrokMP.SaveHotfix-1.0.1.dll
+   BepInEx\plugins\CUCoreLib.KrokMP.SaveHotfix\CUCoreLib.KrokMP.SaveHotfix.dll
    ```
 
 6. 主机和所有客户端必须安装相同版本。
@@ -101,10 +105,10 @@ KrokMP 会分别保存和载入每一名多人角色。CUCoreLib 原有的扩展
 BepInEx\LogOutput.log
 ```
 
-日志中应出现 1.0.1 插件加载记录，以及类似下面的成功信息：
+日志中应出现 1.0.0 插件加载记录，以及类似下面的成功信息：
 
 ```text
-[CUCoreLib KrokMP SaveSystem Bypass 1.0.1] Removed bad net.cucorelib Harmony patches from SaveSystem.SaveGame and TryLoadGame; disabled the CUCoreLib save snapshot module.
+[CUCoreLib KrokMP SaveSystem Bypass 1.0.0] Removed bad net.cucorelib Harmony patches from SaveSystem.SaveGame and TryLoadGame; disabled the CUCoreLib save snapshot module.
 ```
 
 在确认热修复已成功加载前，不要使用重要存档进行测试。
@@ -206,7 +210,7 @@ When CUCoreLib and KrokMP are installed together, loading a multiplayer save may
 
 Completely disabling CUCoreLib's save patches fixes the inventory isolation problem, but it also prevents custom items registered through CUCoreLib from loading. This project applies a selective workaround: it disables only the unsafe save and restore paths while retaining CUCoreLib's custom-item loading transpiler.
 
-Version **1.0.1** has been tested in an actual multiplayer session. Player inventories remained isolated correctly, and CUCoreLib-based custom items could still be saved and loaded.
+Version **1.0.0** has been tested in an actual multiplayer session. Player inventories remained isolated correctly, and CUCoreLib-based custom items could still be saved and loaded.
 
 ### Compatibility
 
@@ -216,6 +220,10 @@ Tested with:
 - BepInEx 5.4.23.5
 - KrokMP 4.0.1
 - CUCoreLib 1.0.3-alpha
+
+Special thanks to the following players for helping test this project: 
+下雪吃火锅
+叶er
 
 The hotfix was also designed to work with CUCoreLib nightly 1.0.4, but the tested baseline is CUCoreLib 1.0.3-alpha.
 
@@ -260,7 +268,7 @@ KrokMP therefore remains responsible for per-player inventory persistence, while
 5. Copy the release DLL into that directory:
 
    ```text
-   dist\CUCoreLib.KrokMP.SaveHotfix-1.0.1.dll
+   dist\CUCoreLib.KrokMP.SaveHotfix.dll
    ```
 
 6. Install the same hotfix version on the host and every client.
@@ -279,10 +287,10 @@ After launching the game, check:
 BepInEx\LogOutput.log
 ```
 
-The log should contain a plugin-loading entry for version 1.0.1 and a message similar to:
+The log should contain a plugin-loading entry for version 1.0.0 and a message similar to:
 
 ```text
-[CUCoreLib KrokMP SaveSystem Bypass 1.0.1] Removed bad net.cucorelib Harmony patches from SaveSystem.SaveGame and TryLoadGame; disabled the CUCoreLib save snapshot module.
+[CUCoreLib KrokMP SaveSystem Bypass 1.0.0] Removed bad net.cucorelib Harmony patches from SaveSystem.SaveGame and TryLoadGame; disabled the CUCoreLib save snapshot module.
 ```
 
 Do not test an important save unless the hotfix is confirmed to have loaded.
