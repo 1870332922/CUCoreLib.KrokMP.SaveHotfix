@@ -1,7 +1,0 @@
-Project: CUCoreLib.KrokMP.SaveHotfix
-Version: 1.0.0
-Package generated: 2026-08-01
-Test baseline: user-reported multiplayer test passed for SelectiveSaveHotfix 4.0.0
-Core method bodies: byte-for-byte identical to tested baseline
-Release DLL: CUCoreLib.KrokMP.SaveHotfix.dll
-Release DLL SHA-256: dfa437f4496255e3053c7ea16345690b58716fc514847e9cb63f14ff1ad830de
