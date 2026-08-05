@@ -1,0 +1,7 @@
+Project: CUCoreLib.KrokMP.SaveHotfix
+Version: 1.0.1
+License: LGPL-3.0-only
+Test baseline: multiplayer inventory isolation and CUCoreLib custom-item loading verified with the original SelectiveSaveHotfix 4.0.0 logic
+Runtime plugin GUID: net.cucorelib.krokmp.savesystembypass.hotfix
+Runtime assembly identity: CUCoreLib.KrokMP.SaveSystemBypassHotfix, Version=3.0.0.0
+Release DLL: dist/CUCoreLib.KrokMP.SaveHotfix.dll
