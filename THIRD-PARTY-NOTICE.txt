@@ -1,4 +1,0 @@
-本项目运行时依赖 Casualties Unknown Demo、BepInEx、Harmony、KrokMP 与 CUCoreLib。
-这些第三方程序和程序集不包含在本源码包中，其版权和许可由各自权利人及项目维护者规定。
-
-CUCoreLib 采用 GNU Lesser General Public License v3。
