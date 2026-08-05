@@ -2,11 +2,17 @@
 
 Release: `CUCoreLib.KrokMP.SaveHotfix 1.0.1`
 
-The 1.0.1 release DLL was produced from the corrected, working 1.0.0 DLL by equal-length replacement of version strings only:
+The release DLL changes only four equal-length version-string characters relative to the metadata-repaired build:
 
-- one UTF-8 `BepInPlugin` version string: `1.0.0` → `1.0.1`;
-- three UTF-16 log-message version strings: `1.0.0` → `1.0.1`.
+- one UTF-8 `BepInPlugin` version string;
+- three UTF-16 log-message version strings.
 
-No method body, Harmony operation, plugin GUID, display name, namespace, type definition, custom-attribute association, metadata-table layout, or assembly identity was changed.
+No method body, Harmony operation, save-bypass logic, plugin GUID, display name, namespace, assembly identity, metadata-table row, or custom-attribute association was changed.
 
-The CLR assembly identity remains `3.0.0.0`, matching the tested working binary. The public BepInEx plugin/release version is `1.0.1`.
+The repaired `CustomAttribute` table ordering remains:
+
+```text
+39, 67
+```
+
+The CLR assembly identity remains `3.0.0.0`. The public BepInEx plugin and release version is `1.0.1`.

@@ -1,0 +1,6 @@
+FILE /mnt/data/release_1_0_2_verified/CUCoreLib.KrokMP.SaveHotfix/dist/CUCoreLib.KrokMP.SaveHotfix.dll size 3584 rows CA 2
+TYPE 2 CUCoreLibKrokMPSaveSystemBypassHotfix.Plugin [1048833, 85, 92, 5, 1, 1]
+CA_ALL 1 rawparent 39 parent ('Module', 1, 7) ctor ('MemberRef', 3, 3) ('MemberRef', '.ctor', ('TypeRef', 3, 1), '2001010e') blobidx 205 blob 01000d6e65742e6375636f72656c69620000
+CA_ALL 2 rawparent 67 parent ('TypeDef', 2, 3) ctor ('MemberRef', 2, 3) ('MemberRef', '.ctor', ('TypeRef', 2, 1), '2003010e0e0e') blobidx 107 blob 01002c6e65742e6375636f72656c69622e6b726f6b6d702e7361766573797374656d6279706173732e686f74666978294355436f72654c6962204b726f6b4d50205361766553797374656d2042797061737320486f7466697805312e302e320000
+TYPEREF 1 BepInEx BaseUnityPlugin ('AssemblyRef', 2, 2)
+TYPEREF 2 BepInEx BepInPlugin ('AssemblyRef', 2, 2)

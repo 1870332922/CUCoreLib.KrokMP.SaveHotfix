@@ -2,7 +2,7 @@
 
 项目与发布文件名称为 `CUCoreLib.KrokMP.SaveHotfix`，发布版本为 `1.0.1`。
 
-为保持与已经实测通过的 4.0.0 热修复一致，以下运行身份保持不变：
+为保持与已经实测通过的 1.0.1 热修复一致，以下运行身份保持不变：
 
 - BepInEx GUID：`net.cucorelib.krokmp.savesystembypass.hotfix`
 - BepInEx 显示名：`CUCoreLib KrokMP SaveSystem Bypass Hotfix`
