@@ -22,7 +22,7 @@ if (-not (Test-Path $pluginsDir)) {
 }
 
 # BepInEx identifies plugins by GUID and chooses among duplicate versions.
-# Remove all earlier experimental/rebranded variants before installing 1.0.0.
+# Remove all earlier experimental/rebranded variants before installing 1.0.1.
 $patterns = @(
     "CUCoreLib.KrokMP.InventoryHotfix*.dll",
     "CUCoreLib.KrokMP.PlayerSaveIsolationHotfix*.dll",

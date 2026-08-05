@@ -7,10 +7,10 @@
     <AssemblyName>CUCoreLib.KrokMP.SaveSystemBypassHotfix</AssemblyName>
     <RootNamespace>CUCoreLibKrokMPSaveSystemBypassHotfix</RootNamespace>
 
-    <Version>1.0.0</Version>
-    <AssemblyVersion>1.0.0.0</AssemblyVersion>
-    <FileVersion>1.0.0.0</FileVersion>
-    <InformationalVersion>1.0.0</InformationalVersion>
+    <Version>1.0.1</Version>
+    <AssemblyVersion>3.0.0.0</AssemblyVersion>
+    <FileVersion>1.0.1.0</FileVersion>
+    <InformationalVersion>1.0.1</InformationalVersion>
     <PackageLicenseExpression>LGPL-3.0-only</PackageLicenseExpression>
 
     <LangVersion>latest</LangVersion>

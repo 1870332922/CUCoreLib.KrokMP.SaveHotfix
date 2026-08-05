@@ -1,29 +1,12 @@
-# Core Code Verification
+# Core code verification
 
-Baseline: user-tested `CUCoreLib.KrokMP.SelectiveSaveHotfix 4.0.0`.
+Release: `CUCoreLib.KrokMP.SaveHotfix 1.0.1`
 
-## Result
+The 1.0.1 release DLL was produced from the corrected, working 1.0.0 DLL by equal-length replacement of version strings only:
 
-**PASS — every managed method body is byte-for-byte identical to the tested baseline.**
+- one UTF-8 `BepInPlugin` version string: `1.0.0` → `1.0.1`;
+- three UTF-16 log-message version strings: `1.0.0` → `1.0.1`.
 
-| Method | Baseline SHA-256 | 1.0.0 SHA-256 | Identical |
-|---|---|---|---|
-| `.ctor` | `ec7b7435e2383fa194ac2ff064bdf8f877a687944aba9dc5fc1dbea2ebed4193` | `ec7b7435e2383fa194ac2ff064bdf8f877a687944aba9dc5fc1dbea2ebed4193` | Yes |
-| `Start` | `0c42d6dd88e5754db4759bd5aa08a7debc51507e037e2f262d4d019ba8677f49` | `0c42d6dd88e5754db4759bd5aa08a7debc51507e037e2f262d4d019ba8677f49` | Yes |
+No method body, Harmony operation, plugin GUID, display name, namespace, type definition, custom-attribute association, metadata-table layout, or assembly identity was changed.
 
-## Intentionally changed metadata
-
-- BepInEx plugin version: `4.0.0` → `1.0.0`.
-- CLR assembly version: `3.0.0.0` → `1.0.0.0`.
-- User-facing log version: `4.0.0` → `1.0.0`.
-- External release filename: `CUCoreLib.KrokMP.SaveHotfix.dll`.
-
-## Preserved runtime identity
-
-- BepInEx GUID: `net.cucorelib.krokmp.savesystembypass.hotfix`.
-- BepInEx display name: `CUCoreLib KrokMP SaveSystem Bypass Hotfix`.
-- Internal CLR assembly name: `CUCoreLib.KrokMP.SaveSystemBypassHotfix`.
-- Module name: `CUCoreLib.KrokMP.SaveSystemBypassHotfix.dll`.
-- Namespace: `CUCoreLibKrokMPSaveSystemBypassHotfix`.
-
-Binary patch counts: ASCII version=1, UTF-16 log version=3.
+The CLR assembly identity remains `3.0.0.0`, matching the tested working binary. The public BepInEx plugin/release version is `1.0.1`.

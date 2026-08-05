@@ -11,7 +11,7 @@ namespace CUCoreLibKrokMPSaveSystemBypassHotfix
     [BepInPlugin(
         "net.cucorelib.krokmp.savesystembypass.hotfix",
         "CUCoreLib KrokMP SaveSystem Bypass Hotfix",
-        "1.0.0")]
+        "1.0.1")]
     public sealed class Plugin : BaseUnityPlugin
     {
         private void Start()
@@ -19,7 +19,7 @@ namespace CUCoreLibKrokMPSaveSystemBypassHotfix
             Type saveSystem = Type.GetType("SaveSystem, Assembly-CSharp", false);
             if (saveSystem == null)
             {
-                Debug.LogError("[CUCoreLib KrokMP SaveSystem Bypass 1.0.0] SaveSystem type not found; no patches were removed.");
+                Debug.LogError("[CUCoreLib KrokMP SaveSystem Bypass 1.0.1] SaveSystem type not found; no patches were removed.");
                 return;
             }
 
@@ -43,9 +43,9 @@ namespace CUCoreLibKrokMPSaveSystemBypassHotfix
             ClearPendingRestore();
 
             if (saveGame != null && tryLoadGame != null)
-                Debug.Log("[CUCoreLib KrokMP SaveSystem Bypass 1.0.0] Removed bad net.cucorelib Harmony patches from SaveSystem.SaveGame and TryLoadGame; disabled the CUCoreLib save snapshot module.");
+                Debug.Log("[CUCoreLib KrokMP SaveSystem Bypass 1.0.1] Removed bad net.cucorelib Harmony patches from SaveSystem.SaveGame and TryLoadGame; disabled the CUCoreLib save snapshot module.");
             else
-                Debug.LogWarning("[CUCoreLib KrokMP SaveSystem Bypass 1.0.0] SaveGame or TryLoadGame was not found. Check game/mod versions.");
+                Debug.LogWarning("[CUCoreLib KrokMP SaveSystem Bypass 1.0.1] SaveGame or TryLoadGame was not found. Check game/mod versions.");
         }
 
         private static void DisableSaveSnapshotModule()

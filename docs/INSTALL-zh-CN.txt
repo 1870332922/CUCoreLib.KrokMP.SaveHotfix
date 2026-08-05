@@ -1,4 +1,4 @@
-CUCoreLib.KrokMP.SaveHotfix 1.0.0
+CUCoreLib.KrokMP.SaveHotfix 1.0.1
 
 安装：
 1. 完全退出游戏。
@@ -6,6 +6,6 @@ CUCoreLib.KrokMP.SaveHotfix 1.0.0
 3. 在 PowerShell 中运行：
    .\scripts\install.ps1 -GameDir "steamapps\common\Casualties Unknown Demo"
 4. 主机和所有客户端安装相同版本。
-5. 启动后检查 BepInEx\LogOutput.log，确认出现 1.0.0 的加载和成功日志。
+5. 启动后检查 BepInEx\LogOutput.log，确认出现 1.0.1 的加载和成功日志。
 
 安装脚本会删除旧实验版 DLL 并清理 BepInEx 缓存，避免同 GUID 的旧版本优先加载。
