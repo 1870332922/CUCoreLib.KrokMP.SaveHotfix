@@ -10,6 +10,8 @@
 
 ## 中文
 
+此模组修复的问题已在 CUCoreLib 1.0.4-Beta 得到修复。请更新 CUCoreLib 而不是使用此模组。
+
 一款兼容性热修复，可避免 CUCoreLib 导致 KrokMP 多人背包数据损坏或错配，同时保留基于 CUCoreLib 的自定义物品载入能力。
 
 所有文件（包括你正在看的这个 README.md）均由 ChatGPT 生成。
@@ -193,6 +195,8 @@ CUCoreLib 同样采用 GNU LGPL 3.0。具体信息请参阅仓库中的 `LICENSE
 ---
 
 ## English
+
+The issue fixed by this mod has already been resolved in **CUCoreLib 1.0.4-Beta**. Please update **CUCoreLib** instead of using this mod.
 
 A compatibility hotfix that prevents CUCoreLib from corrupting or mixing KrokMP multiplayer inventories while preserving the loading of CUCoreLib-based custom items.
 
